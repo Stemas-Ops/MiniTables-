@@ -10,7 +10,52 @@ import pokemonRoutes from "./features/Pokemon/pokemon.routes.js";
 import treinadorRoutes from "./features/Treinador/treinador.routes.js";
 import tipoRoutes from "./features/Tipo/tipo.routes.js";
 import pokedexRoutes from "./features/Pokedex/pokedex.routes.js";
+import swagger from "@fastify/swagger";
+import swaggerUI from "@fastify/swagger-ui";
 
+// SWAGGER 
+const server = Fastify();
+
+await server.register(swagger, {
+
+    openapi: {
+
+        info: {
+
+            title: "MiniTables Pokémon API",
+
+            description:
+            "API para gerenciamento de Pokémon, treinadores, tipos e Pokédex utilizando arquitetura em camadas.",
+
+            version: "1.0.0"
+
+        },
+
+        servers: [
+
+            {
+                url: "http://localhost:3000",
+                description: "Servidor local"
+            }
+
+        ]
+
+    }
+
+});
+
+
+await server.register(swaggerUI, {
+
+    routePrefix: "/docs",
+
+    uiConfig: {
+
+        docExpansion: "list"
+
+    }
+
+});
 
 // SERVER
 const server = Fastify({

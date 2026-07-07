@@ -45,3 +45,74 @@ export default async function pokemonRoutes(server) {
 
 
 }
+
+// SWAGGER
+server.get("/", {
+
+    schema: {
+
+        tags: ["Pokemon"],
+
+        description: "Lista todos os Pokémon cadastrados",
+
+        response: {
+
+            200: {
+
+                description: "Lista retornada com sucesso",
+
+                type: "array",
+
+                items: {
+
+                    type: "object",
+
+                    properties: {
+
+                        id_pokemon:{
+                            type:"integer"
+                        },
+
+                        nome:{
+                            type:"string"
+                        },
+
+                        nivel:{
+                            type:"integer"
+                        },
+
+                        id_treinador:{
+                            type:"integer"
+                        }
+
+                    }
+
+                }
+
+            },
+
+            404: {
+
+                description:"Pokémon não encontrado",
+
+                type:"object",
+
+                properties:{
+
+                    status:{
+                        type:"string"
+                    },
+
+                    message:{
+                        type:"string"
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}, controller.buscar);
