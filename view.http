@@ -1,0 +1,163 @@
+@baseUrl = http://localhost:3000
+
+####################################################
+# TREINADOR
+####################################################
+
+### Buscar todos os treinadores
+GET {{baseUrl}}/treinador
+
+###
+
+### Buscar treinador por ID
+GET {{baseUrl}}/treinador/1
+
+###
+
+### Criar treinador
+POST {{baseUrl}}/treinador
+Content-Type: application/json
+
+{
+    "nome": "Red",
+    "idade": 16
+}
+
+###
+
+### Atualizar treinador
+PUT {{baseUrl}}/treinador/1
+Content-Type: application/json
+
+{
+    "nome": "Ash Ketchum",
+    "idade": 17
+}
+
+###
+
+### Deletar treinador
+DELETE {{baseUrl}}/treinador/1
+
+####################################################
+# POKEMON
+####################################################
+
+###
+
+### Buscar todos os Pokémon
+GET {{baseUrl}}/pokemon
+
+###
+
+### Buscar Pokémon por ID
+GET {{baseUrl}}/pokemon/1
+
+###
+
+### Criar Pokémon
+POST {{baseUrl}}/pokemon
+Content-Type: application/json
+
+{
+    "nome": "Bulbasaur",
+    "nivel": 15,
+    "id_treinador": 1
+}
+
+###
+
+### Atualizar Pokémon
+PUT {{baseUrl}}/pokemon/1
+Content-Type: application/json
+
+{
+    "nome": "Ivysaur",
+    "nivel": 25,
+    "id_treinador": 1
+}
+
+###
+
+### Deletar Pokémon
+DELETE {{baseUrl}}/pokemon/1
+
+####################################################
+# TIPO
+####################################################
+
+###
+
+### Buscar todos os tipos
+GET {{baseUrl}}/tipo
+
+###
+
+### Buscar tipo por ID
+GET {{baseUrl}}/tipo/1
+
+###
+
+### Criar tipo
+POST {{baseUrl}}/tipo
+Content-Type: application/json
+
+{
+    "nome": "Fantasma"
+}
+
+###
+
+### Atualizar tipo
+PUT {{baseUrl}}/tipo/1
+Content-Type: application/json
+
+{
+    "nome": "Elétrico"
+}
+
+###
+
+### Deletar tipo
+DELETE {{baseUrl}}/tipo/1
+
+####################################################
+# POKEDEX
+####################################################
+
+###
+
+### Buscar todas as Pokédex
+GET {{baseUrl}}/pokedex
+
+###
+
+### Buscar Pokédex por ID
+GET {{baseUrl}}/pokedex/1
+
+###
+
+### Criar Pokédex
+POST {{baseUrl}}/pokedex
+Content-Type: application/json
+
+{
+    "id_treinador": 2,
+    "pokemon_favorito": "Gyarados"
+}
+
+###
+
+### Atualizar Pokédex
+PUT {{baseUrl}}/pokedex/1
+Content-Type: application/json
+
+{
+    "id_treinador": 1,
+    "pokemon_favorito": "Charizard"
+}
+
+###
+
+### Deletar Pokédex
+DELETE {{baseUrl}}/pokedex/1

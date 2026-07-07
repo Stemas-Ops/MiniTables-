@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch server.js",
-    "start": "node server.js"
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/Stemas-Ops/MiniTables-#readme",
   "dependencies": {
-    "@fastify/cors": "^11.2.0"
+    "@fastify/cors": "^11.2.0",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.10.0",
+    "pg": "^8.22.0"
   }
 }
