@@ -327,22 +327,24 @@ Os retornos seguem o padrão:
 
 # Documentação Swagger
 
-A API possui documentação automática utilizando o padrão OpenAPI.
+# Documentação Swagger
 
-A documentação pode ser acessada através de:
+A API possui documentação automática utilizando o padrão OpenAPI por meio dos plugins **@fastify/swagger** e **@fastify/swagger-ui**.
+
+Após iniciar a aplicação, a documentação estará disponível em:
 
 ```text
-http://localhost:3000/docs
+http://localhost:3333/docs
 ```
 
 A interface permite:
 
-- Visualizar todos os endpoints;
-- Ver métodos HTTP disponíveis;
-- Conferir parâmetros;
-- Visualizar JSON esperado;
-- Testar requisições diretamente pelo navegador.
-
+- Visualizar todos os endpoints da API;
+- Consultar os métodos HTTP disponíveis;
+- Ver os parâmetros esperados em cada rota;
+- Visualizar o corpo (Body) das requisições;
+- Conferir as respostas da API;
+- Testar as requisições diretamente pelo navegador.
 ---
 
 # Endpoints Disponíveis
